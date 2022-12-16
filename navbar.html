@@ -1,0 +1,334 @@
+<!doctype html> 
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css"> 
+	<title>Tutorial Membuat Navbar Dengan Bootstrap 4 - www.malasngoding.com</title> 
+</head> 
+<body> 
+	
+ <h4>Contoh Navbar</h4>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tentang</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tutorial
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Tutorial HTML</a>
+          <a class="dropdown-item" href="#">Tutorial CSS</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Tutorial Bootstrap</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link Mati</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Cari" aria-label="Cari">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
+    </form>
+
+  </div>
+
+</nav>
+
+
+<!-- logo -->
+<br/>
+<br/>
+<hr>
+
+<h4>Navbar Menggunakan Logo</h4>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="#">
+    <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="Malas Ngoding">
+  </a>
+
+</nav>
+
+
+<br/>
+<br/>
+<hr>
+
+<h4>Navbar Menggunakan Logo dan Judul Website</h4>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="#">
+    <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="Malas Ngoding">
+    Malasngoding.com
+  </a>
+
+</nav>
+
+<br/>
+<br/>
+<hr>
+
+<h4>Menambahkan Komponen Text dan Tombol</h4>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+  <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tentang</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tutorial
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Tutorial HTML</a>
+          <a class="dropdown-item" href="#">Tutorial CSS</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Tutorial Bootstrap</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link Mati</a>
+      </li>
+    </ul>
+
+    <span class="navbar-text mr-3">
+      Silahkan login atau daftar akun
+    </span>
+
+    <a href="#" class="btn btn-outline-success mr-2">Login</a>
+    <a href="#" class="btn btn-outline-danger">Daftar</a>
+
+  </div>
+
+</nav>
+
+<br/>
+<br/>
+<hr>
+
+<h4>Posisi Menu Di Kanan</h4>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+  <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tentang</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tutorial
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Tutorial HTML</a>
+          <a class="dropdown-item" href="#">Tutorial CSS</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Tutorial Bootstrap</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link Mati</a>
+      </li>
+    </ul>
+
+  </div>
+
+
+</nav>
+
+<br/>
+<br/>
+<hr>
+
+<h4>Navbar Container</h4>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="container">
+    <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tentang</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorial
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Tutorial HTML</a>
+            <a class="dropdown-item" href="#">Tutorial CSS</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Tutorial Bootstrap</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link Mati</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</nav>
+
+
+<br/>
+<br/>
+<hr>
+
+
+<h4>Mengubah warna navbar</h4>
+
+<!-- navbar primary (biru)-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+    <span class="navbar-text">
+      Navbar Primary
+    </span>
+
+  </div>
+</nav>
+
+<br/>
+
+<!-- navbar success (hijau)-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container">
+    <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+    <span class="navbar-text">
+      Navbar Success
+    </span>
+
+  </div>
+</nav>
+
+<br/>
+<!-- navbar danger (merah)-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+    <span class="navbar-text">
+      Navbar danger
+    </span>
+
+  </div>
+</nav>
+
+<br/>
+<!-- navbar warning (kuning)-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+  <div class="container">
+    <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+    <span class="navbar-text">
+      Navbar warning
+    </span>
+
+  </div>
+</nav>
+
+<br/>
+<!-- navbar info (hijau toska)-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <div class="container">
+    <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+    <span class="navbar-text">
+      Navbar info
+    </span>
+
+  </div>
+</nav>
+
+<br/>
+
+<!-- navbar gelap (hitam)-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+    <span class="navbar-text text-white">
+      Navbar dark
+    </span>
+
+  </div>
+</nav>
+
+<br/>
+
+<!-- navbar light (terang)-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Malas Ngoding</a>
+
+    <span class="navbar-text">
+      Navbar Light
+    </span>
+
+  </div>
+</nav>
+
+
+
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/popper.js"></script> 
+<script src="assets/js/bootstrap.js"></script>
+</body> 
+</html>
