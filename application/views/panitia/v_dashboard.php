@@ -68,9 +68,15 @@
         <br>
         <br>
         <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; Tugas Sistem Pendukung Keputusan </span><br><br>
+        <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; 1. Deni Warsa Setiawan </span><br><br>
+        <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; 2. Makmum </span><br><br>
+        <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; 3. Miswan </span><br><br>
+        <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; 4. Duta </span><br><br>
+
         <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; Kelompok III MTI Unpam </span><br><br>
 
-        <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; Untuk Download Softcode bisa kunjungi URL <a href="https://wanwanvm.github.io/" target="_blank">Klik disini</a></span>
+        <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; Untuk Download code bisa kunjungi URL <a href="https://github.com/wanwanvm/SPK-SAW-dan-WP" target="_blank">Klik disini</a></span><br><br>
+        <span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;&nbsp; Untuk informasi lainnya bisa kunjungi URL <a href="https://wanwanvm.github.io" target="_blank">Klik disini</a></span>
       </p>
 
 

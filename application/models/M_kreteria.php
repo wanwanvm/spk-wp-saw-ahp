@@ -20,15 +20,17 @@ class M_kreteria extends CI_Model
 
 	function get_kreteria()
 	{
-		//$id_peserta=$this->session->userdata('id_peserta');
-		//$hariini = date('Y-m-d');
-		$hsl = $this->db->query("SELECT tb_kreteria.*,tb_kasus.* FROM tb_kreteria,tb_kasus WHERE  
-		tb_kreteria.id_kasus=tb_kasus.id_kasus");
+		$id_panitia = $this->session->userdata('id_panitia');
+		//$id_kasus = $this->input->get('id_kasus');
+		$id_kasus = $this->session->userdata('id_kasus');
+
+		$hsl = $this->db->query("SELECT kriteria.*,tb_kasus.* FROM kriteria,tb_kasus WHERE  
+		tb_kasus.id_kasus='$id_kasus' and kriteria.id_kasus=tb_kasus.id_kasus and tb_kasus.id_panitia='$id_panitia'");
 		return $hsl;
 	}
 	function hapus_kreteria($id_kreteria)
 	{
-		$hsl = $this->db->query("DELETE FROM tb_kreteria WHERE id_kreteria='$id_kreteria'");
+		$hsl = $this->db->query("DELETE FROM kriteria WHERE id_kreteria='$id_kreteria'");
 		return $hsl;
 	}
 }

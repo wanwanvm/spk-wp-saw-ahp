@@ -24,13 +24,13 @@ class Tambahkreteria extends CI_Controller
 	function simpan_data()
 	{
 
-		$id_kasus = strip_tags($this->input->post('id_kasus'));
+
 		$kd_kreteria = strip_tags($this->input->post('kd_kreteria'));
 		$nm_kreteria = strip_tags($this->input->post('nm_kreteria'));
 		$bobot = strip_tags($this->input->post('bobot'));
 		$jns_kreteria = strip_tags($this->input->post('jns_kreteria'));
 
-		$this->m_tambahkreteria->simpan_data($id_kasus, $kd_kreteria, $nm_kreteria, $bobot, $jns_kreteria);
+		$this->m_tambahkreteria->simpan_data($kd_kreteria, $nm_kreteria, $bobot, $jns_kreteria);
 		echo $this->session->set_flashdata('msg', 'success');
 		redirect('panitia/kreteria');
 	}

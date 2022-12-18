@@ -82,19 +82,19 @@
 
                         <tr>
                           <td colspan="3" align="center">
-                            <h5 align="center"><strong>TAMBAH ALTERNATIF</strong></h5>
+                            <h5 align="center"><strong>TAMBAH ALTERNATIF <?php echo $this->session->userdata('id_kasus'); ?></strong></h5>
                           </td>
                         </tr>
                         <tr>
                           <td><span class="style1">Nama Kasus</span></td>
                           <td><span class="style1"> : </span></td>
-                          <td> <select name="id_kasus" id="id_kasus" class="form-control" required>
-                              <option value="">-Pilih-</option>
-                              <?php foreach ($data->result() as $row) : ?>
-                                <option value="<?php echo $row->id_kasus; ?>">
-                                  <?php echo $row->nm_kasus; ?></option>
-                              <?php endforeach; ?>
-                            </select></td>
+                          <td>
+                            <?php foreach ($data->result() as $row) : ?>
+                              <span class="style1"><input class="form-control" name="id_kasus" type="text" id="id_kasus" value=" <?php echo $row->nm_kasus; ?>" readonly required></span>
+
+                            <?php endforeach; ?>
+                            </select>
+                          </td>
                         </tr>
                         <tr>
                           <td>Kode Alternatif ** Contoh : A1 </td>

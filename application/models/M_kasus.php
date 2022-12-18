@@ -20,9 +20,9 @@ class M_kasus extends CI_Model
 
 	function get_kasus()
 	{
-		//$id_peserta=$this->session->userdata('id_peserta');
+		$id_panitia = $this->session->userdata('id_panitia');
 		//$hariini = date('Y-m-d');
-		$hsl = $this->db->query("SELECT tb_kasus.* FROM tb_kasus");
+		$hsl = $this->db->query("SELECT tb_kasus.* FROM tb_kasus where tb_kasus.id_panitia='$id_panitia'");
 		return $hsl;
 	}
 	function hapus_kasus($id_kasus)

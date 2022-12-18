@@ -73,7 +73,7 @@
 
                         <tr>
                           <th width="10" style="width:10px;">#</th>
-                          <th width="80">Nama Kasus</th>
+                          <th width="80">Nama Kasus cek <?php echo  $this->session->userdata('id_kasus'); ?></th>
                           <th width="32">Kd Alternatif</th>
                           <th width="80">Nama Alternatif</th>
 
@@ -93,6 +93,7 @@
                           $kd_alternatif = $i['kd_alternatif'];
                           $nm_alternatif = $i['nm_alternatif'];
                           $nm_kasus = $i['nm_kasus'];
+
 
                           //$link_view=$i['link_view'];
                           // $status=$i['status'];

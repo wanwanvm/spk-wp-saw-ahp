@@ -403,7 +403,7 @@
     <script type="text/javascript">
       $.toast({
         heading: 'Error',
-        text: "Password dan Ulangi Password yang Anda masukan tidak sama.",
+        text: "Data sudah Terdapat di database.",
         showHideTransition: 'slide',
         icon: 'error',
         hideAfter: false,

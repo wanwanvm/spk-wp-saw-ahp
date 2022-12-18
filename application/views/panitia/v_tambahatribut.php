@@ -88,36 +88,38 @@
                         <tr>
                           <td><span class="style1">Nama Kasus</span></td>
                           <td><span class="style1"> : </span></td>
-                          <td> <select name="id_kasus" id="kasus" class="kasus form-control" required>
-                              <option value="">-Pilih-</option>
-                              <?php foreach ($data->result() as $row) : ?>
-                                <option value="<?php echo $row->id_kasus; ?>">
-                                  <?php echo $row->nm_kasus; ?></option>
-                              <?php endforeach; ?>
-                            </select></td>
+                          <td> <?php foreach ($data->result() as $row) : ?>
+                              <span class="style1"><input class="form-control" name="id_kasus" type="text" id="id_kasus" value=" <?php echo $row->nm_kasus; ?>" readonly required></span>
+
+                            <?php endforeach; ?>
+                          </td>
                         </tr>
                         <tr>
                           <td><span class="style1">Nama Alternatif</span></td>
                           <td><span class="style1"> : </span></td>
-                          <td>
-                            <select name="id_alternatif" class="alternatif form-control" required>
-                              <option value="">-PILIH-</option>
-                            </select>
-                          </td>
+                          <td> <select name="id_alternatif" id="id_alternatif" class="kasus form-control" required>
+                              <option value="">-Pilih-</option>
+                              <?php foreach ($data_alternatif->result() as $row) : ?>
+                                <option value="<?php echo $row->id_alternatif; ?>">
+                                  <?php echo $row->nm_alternatif; ?></option>
+                              <?php endforeach; ?>
+                            </select></td>
                         </tr>
                         <tr>
-                          <td><span class="style1">Nama Kreteria</span></td>
+                          <td><span class="style1">Nama Kriteria</span></td>
                           <td><span class="style1"> : </span></td>
-                          <td>
-                            <select name="id_kreteria" id="kreteria" class="kreteria form-control" required>
-                              <option value="">-PILIH-</option>
-                            </select>
-                          </td>
+                          <td> <select name="id_kreteria" id="id_kreteria" class="kasus form-control" required>
+                              <option value="">-Pilih-</option>
+                              <?php foreach ($data_kreteria->result() as $row) : ?>
+                                <option value="<?php echo $row->id_kreteria; ?>">
+                                  <?php echo $row->nm_kreteria; ?></option>
+                              <?php endforeach; ?>
+                            </select></td>
                         </tr>
                         <tr>
                           <td>Nilai </td>
                           <td>:</td>
-                          <td> <span class="style1"><input class="form-control" name="nilai" type="text" id="nilai" required></span></td>
+                          <td> <span class="style1"><input class="form-control" name="nilai" type="text" id="nilai" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required></span></td>
                         </tr>
                         <tr>
                           <td>Satuan </td>
@@ -501,56 +503,7 @@
   <script src="<?php echo base_url() . 'assets/dist/js/demo.js' ?>"></script>
   <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/toast/jquery.toast.min.js' ?>"></script>
   <!-- page script -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#kasus').change(function() {
-        var id_kasus = $(this).val();
-        $.ajax({
-          url: "<?php echo base_url(); ?>panitia/tambahatribut/get_alternatif",
-          method: "POST",
-          data: {
-            id_kasus: id_kasus
-          },
-          async: false,
-          dataType: 'json',
-          success: function(data) {
-            var html = '';
-            var i;
-            for (i = 0; i < data.length; i++) {
-              html += '<option value=' + data[i].id_alternatif + '>' + data[i].nm_alternatif + '</option>';
-            }
-            $('.alternatif').html(html);
 
-          }
-        });
-      });
-    });
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#kasus').change(function() {
-        var id_kasus = $(this).val();
-        $.ajax({
-          url: "<?php echo base_url(); ?>panitia/tambahatribut/get_kreteria",
-          method: "POST",
-          data: {
-            id_kasus: id_kasus
-          },
-          async: false,
-          dataType: 'json',
-          success: function(data) {
-            var html = '';
-            var ii;
-            for (ii = 0; ii < data.length; ii++) {
-              html += '<option value=' + data[ii].id_kreteria + '>' + data[ii].nm_kreteria + '</option>';
-            }
-            $('.kreteria').html(html);
-
-          }
-        });
-      });
-    });
-  </script>
   <script>
     $(function() {
       $("#example1").DataTable();

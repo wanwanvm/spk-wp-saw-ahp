@@ -15,36 +15,38 @@ class Tambahatribut extends CI_Controller
 
 	function index()
 	{
-		//$x['data']=$this->m_panitiapenerimalalu->get_panitia_status();
+
 		$x['data'] = $this->m_tambahatribut->get_kasus();
+		$x['data_alternatif'] = $this->m_tambahatribut->get_alternatif();
+		$x['data_kreteria'] = $this->m_tambahatribut->get_kreteria();
 		$this->load->view('panitia/v_tambahatribut', $x);
-		//$this->load->view('panitia/v_tambahalternatif');
 	}
-	function get_alternatif()
-	{
-		$id_kasus = $this->input->post('id_kasus');
-		$data = $this->m_tambahatribut->get_alternatif($id_kasus);
-		echo json_encode($data);
-	}
-	function get_kreteria()
-	{
-		$id_kasus = $this->input->post('id_kasus');
-		$data = $this->m_tambahatribut->get_kreteria($id_kasus);
-		echo json_encode($data);
-	}
+
 	function simpan_data()
 	{
 
 
-		$id_kreteria = strip_tags($this->input->post('id_kreteria'));
+		//$id_kreteria = strip_tags($this->input->post('id_kreteria'));
 
-		$id_alternatif = strip_tags($this->input->post('id_alternatif'));
+		//$id_alternatif = strip_tags($this->input->post('id_alternatif'));
 		$nilai = strip_tags($this->input->post('nilai'));
 		$satuan = strip_tags($this->input->post('satuan'));
+		//cel data 
+		$id_kreteria = strip_tags(str_replace("'", "", $this->input->post('id_kreteria')));
+		$id_alternatif = strip_tags(str_replace("'", "", $this->input->post('id_alternatif')));
+		$cekatribu = $this->m_tambahatribut->cekatribut($id_kreteria, $id_alternatif);
+		//echo json_encode($cadmin);
+		//$c = 3;
+		if ($cekatribu->num_rows() > 0) {
+			//if ($c == 3) {
 
-		$this->m_tambahatribut->simpan_data($id_kreteria, $id_alternatif, $nilai, $satuan);
-		echo $this->session->set_flashdata('msg', 'success');
-		redirect('panitia/atribut');
+			echo $this->session->set_flashdata('msg', 'error');
+			redirect('panitia/atribut');
+		} else {
+			$this->m_tambahatribut->simpan_data($id_kreteria, $id_alternatif, $nilai, $satuan);
+			echo $this->session->set_flashdata('msg', 'success');
+			redirect('panitia/atribut');
+		}
 	}
 
 

@@ -256,11 +256,11 @@
                           $id_kreteria = $i['id_kreteria'];
                           $id_alternatif = $i['id_alternatif'];
                           //memasukan pembagi
-                          $q = $this->db->query("SELECT tb_atribut.id_atribut,tb_kreteria.id_kreteria,tb_kreteria.nm_kreteria, 
-                          if(tb_kreteria.jns_kreteria='benefit', MAX(tb_atribut.nilai_atribut),
-                          MIN(tb_atribut.nilai_atribut)) as pembagi,tb_kreteria.jns_kreteria FROM tb_kasus,tb_kreteria,tb_atribut 
-                          WHERE tb_atribut.id_kreteria=tb_kreteria.id_kreteria and tb_kreteria.id_kasus=tb_kasus.id_kasus 
-                          and tb_kreteria.id_kreteria='$id_kreteria' GROUP BY tb_atribut.id_kreteria ");
+                          $q = $this->db->query("SELECT tb_atribut.id_atribut,kriteria.id_kreteria,kriteria.nm_kreteria, 
+                          if(kriteria.jns_kreteria='benefit', MAX(tb_atribut.nilai_atribut),
+                          MIN(tb_atribut.nilai_atribut)) as pembagi,kriteria.jns_kreteria FROM tb_kasus,kriteria,tb_atribut 
+                          WHERE tb_atribut.id_kreteria=kriteria.id_kreteria and kriteria.id_kasus=tb_kasus.id_kasus 
+                          and kriteria.id_kreteria='$id_kreteria' GROUP BY tb_atribut.id_kreteria ");
                           $c = $q->row_array();
                           $pembagi = $c['pembagi'];
                           $id_kreteriax = $c['id_kreteria'];
@@ -351,7 +351,7 @@
 
               <div class="box">
                 <div class="box-header">
-                  <b>TABEL HASIL PERANGKINGAN</b>
+                  <b>TABEL HASIL PERANGKINGAN <input type="button" value="Proses" onClick="document.location.reload(true)"></b>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">

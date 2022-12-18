@@ -32,7 +32,7 @@ $op = $c['nama_panitia'];
         </a>
       </li>
       <li>
-        <a href="<?php echo base_url() . 'panitia/alternatif' ?>">
+        <a href="<?php echo base_url() . 'panitia/hasilalternatif' ?>">
           <i class="fa fa-users"></i> <span>Alternatif</span>
           <span class="pull-right-container">
             <small class="label pull-right"></small>
@@ -41,15 +41,15 @@ $op = $c['nama_panitia'];
       </li>
 
       <li>
-        <a href="<?php echo base_url() . 'panitia/kreteria' ?>">
-          <i class="fa fa-users"></i> <span>Kreteria </span>
+        <a href="<?php echo base_url() . 'panitia/hasilkreteria' ?>">
+          <i class="fa fa-users"></i> <span>Kriteria </span>
           <span class="pull-right-container">
             <small class="label pull-right"></small>
           </span>
         </a>
       </li>
       <li>
-        <a href="<?php echo base_url() . 'panitia/atribut' ?>">
+        <a href="<?php echo base_url() . 'panitia/hasilatribut' ?>">
           <i class="fa fa-users"></i> <span>Atribut</span>
           <span class="pull-right-container">
             <small class="label pull-right"></small>
@@ -73,7 +73,7 @@ $op = $c['nama_panitia'];
         </a>
       </li>
       <li>
-        <a href="http://localhost/tugas-spk2/ahp/">
+        <a href="<?php echo base_url() . 'panitia/hasilahp' ?>">
           <i class="fa fa-users"></i> <span>Hasil Metode AHP</span>
           <span class="pull-right-container">
             <small class="label pull-right"></small>

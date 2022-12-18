@@ -388,9 +388,9 @@
                         ?>
                           <?php //memasukan pembagi
                           $qx = $this->db->query("SELECT tb_normalisasi_atribut_wp.nilaiwj,GROUP_CONCAT(tb_normalisasi_atribut_wp.nilaiwj) as nilaidata FROM 
-                            tb_kreteria,tb_kasus,tb_alternatif, tb_atribut,tb_normalisasi_atribut_wp WHERE tb_alternatif.id_kasus=tb_kasus.id_kasus and 
-                            tb_kreteria.id_kasus=tb_kasus.id_kasus and tb_normalisasi_atribut_wp.id_atribut=tb_atribut.id_atribut and tb_atribut.id_kreteria=tb_kreteria.id_kreteria 
-                            and tb_alternatif.id_alternatif=tb_atribut.id_alternatif and tb_alternatif.id_alternatif='$id_alternatif' ");
+                            kriteria,tb_kasus,alternatif, tb_atribut,tb_normalisasi_atribut_wp WHERE alternatif.id_kasus=tb_kasus.id_kasus and 
+                            kriteria.id_kasus=tb_kasus.id_kasus and tb_normalisasi_atribut_wp.id_atribut=tb_atribut.id_atribut and tb_atribut.id_kreteria=kriteria.id_kreteria 
+                            and alternatif.id_alternatif=tb_atribut.id_alternatif and alternatif.id_alternatif='$id_alternatif' ");
                           // $menux = array();
                           $cx = $qx->row_array();
                           //$sata = array(1.5806896063645, 0.066608462908094, 1.2346595100138, 1.4736547115524, 0.41303218561695);
@@ -467,7 +467,7 @@
 
               <div class="box">
                 <div class="box-header">
-                  <b>TABEL HASIL PERANGKINGAN</b>
+                  <b>TABEL HASIL PERANGKINGAN <input type="button" value="Proses" onClick="document.location.reload(true)"></b>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">

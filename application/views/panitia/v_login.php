@@ -59,13 +59,15 @@
 
       <!-- /.social-auth-links -->
       <hr />
+      <center>
+
+        <a href="<?php echo base_url() . 'panitia/registrasi' ?>"> klik disini untuk mendaftar</a>.
+      </center>
       <p>
         <center>Copyright <?php echo date('Y'); ?> by MTI-UNPAM <br /> All Right Reserved</center>
       </p>
       <p>
-        <center>
-          info user dan password hubungi email : wanwanvm@gmail.com
-        </center>
+
       </p>
     </div>
     <!-- /.login-box-body -->

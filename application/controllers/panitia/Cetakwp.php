@@ -21,7 +21,7 @@ class Cetakwp extends CI_Controller
 		$x['data_atribut'] = $this->m_cetakwp->get_atribut();
 		$x['data_atributwp'] = $this->m_cetakwp->get_atributwp();
 		$x['data_pembagi'] = $this->m_cetakwp->get_pembagi();
-		$x['data_normalisasi'] = $this->m_cetakwp->get_normaliasi_atribut();
+
 		$x['data_hitungsaw'] = $this->m_cetakwp->get_hitungsaw();
 		$x['data_hasilwp'] = $this->m_cetakwp->get_hasilwp();
 		$x['data_si'] = $this->m_cetakwp->get_si();
