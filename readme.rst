@@ -1,11 +1,9 @@
 ###################
-TUGAS MATAKULIAH SPK 
+SPK 
 ###################
 
 Miswan
-Deni Warsa Setiawan
-Makmun
-Duta
+
 *******************
 Release Information
 *******************
